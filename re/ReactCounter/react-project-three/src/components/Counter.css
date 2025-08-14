@@ -1,0 +1,8 @@
+.counter-container{
+    background-color: rgb(232, 248, 156);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 1.5rem;
+    border: 3px solid black;
+}
