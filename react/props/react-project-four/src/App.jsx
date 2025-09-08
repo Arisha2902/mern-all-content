@@ -15,13 +15,14 @@ function App() {
   return (
     <div>
       <h1>{count} </h1>
-      <button handleclick ={handleclick} text="click me" >Click me </button>
+      {/* <button handleclick ={handleclick} text="click me" >Click me </button> */}
+      <button onClick={handleclick}>Click me</button>
       <h1>{count}</h1>
-      {/* <Card name="arisha">
+      <Card name="arisha">
         <h1>hello</h1>
         <p>world</p>
         <p>learning new things</p>
-      </Card> */}
+      </Card>
     </div>
   )
 }
