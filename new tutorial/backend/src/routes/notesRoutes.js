@@ -1,10 +1,10 @@
 import express from "express";
-import { getAllNotes , create ,  update , deleted} from "../controllers/notesController.js"
+import { getAllNotes , create ,  update , deleted , getNoteById} from "../controllers/notesController.js"
 
 const router = express.Router();
 
 router.get("/",getAllNotes);
-
+router.get("/:id",getNoteById);
 router.post("/", create);
 router.put("/:id" , update);
 router.delete("/:id", deleted);
