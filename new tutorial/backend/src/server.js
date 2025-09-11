@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5001
 
-connectDB();
+// connectDB();
 
 // middleware
 app.use(express.json())
@@ -31,7 +31,13 @@ app.use("/api/notes", notesRoutes);
 // res.send("you got your notes there");
 // });
 
-
-app.listen(5000, () => {
+connectDB().then(() => {
+    app.listen(PORT, () => {
     console.log("server has started on port :" , PORT);
-})
+});
+});
+
+
+// app.listen(5000, () => {
+//     console.log("server has started on port :" , PORT);
+// })
